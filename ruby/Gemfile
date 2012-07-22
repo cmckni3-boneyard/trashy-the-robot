@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+group :development do
+  gem 'awesome_print'       # pretty print in irb to the max
+  gem 'fancy_irb'           # live result printing in irb
+  gem 'hirb'                # table/tree irb object views
+  gem 'pry'                 # live code inspection irb alternative
+  gem 'pry-doc'             # documentation for pry
+  gem 'wirb'                # irb colorization
+end
+
+group :test do
+  gem 'rspec'
+  gem 'growl', '1.0.3'
+end
