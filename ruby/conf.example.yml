@@ -1,0 +1,7 @@
+email:
+  sender: ""
+  receivers: ""
+  
+gmail_credentials:
+  gmail_username: ""
+  gmail_password: ""

@@ -9,6 +9,7 @@ while true do
     puts "Sending"
     trashy.send_email
   else
-    sleep(30.minutes)
+    puts "sleeping"
+    sleep(30*60)
   end
 end
