@@ -16,7 +16,14 @@ class Trashy
     
     smtp.start(Socket.gethostname,@email_config["gmail_credentials"]["gmail_username"],@email_config["gmail_credentials"]["gmail_password"],:login) do |server|
        @receivers.each {|receiver|
-       server.send_message @message, @email_config["email"]["sender"], receiver
+         message = <<MESSAGE_END
+From: #{@email_config["email"]["sender"]}
+To: #{receiver}
+Subject: Take out the trash
+
+#{@message}
+MESSAGE_END
+       server.send_message message, @email_config["email"]["sender"], receiver
        }
     end
   end
