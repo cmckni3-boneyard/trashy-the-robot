@@ -1,7 +1,7 @@
-require './trashy'
+#!/usr/bin/env ruby
+require './trashy.rb'
 
 trashy = Trashy.new
-trashy.init
 
 while true do
   time = Time.now.utc

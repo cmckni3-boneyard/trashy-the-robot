@@ -4,7 +4,7 @@ require 'yaml'
 
 class Trashy
   @message = nil
-  def init
+  def initialize
     @email_config = YAML.load_file('conf.yml')
     @message = File.read("email.txt")
     @receivers = @email_config["email"]["receivers"].split(',')
